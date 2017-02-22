@@ -20,12 +20,14 @@ var appchat = angular.module('appchat', ['ionic']);
                 StatusBar.styleDefault();
             }
         });
+
+
     });
 
     appchat.config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
 
-            .state('index', {
+            .state('/', {
                 url: '/signup',
                 templateUrl: 'app/views/signup.html',
                 controller: 'UserController'
@@ -69,7 +71,8 @@ var appchat = angular.module('appchat', ['ionic']);
 
         .state('login_success', {
             url: '/login_success',
-            templateUrl: 'app/views/login_success.html'
+            templateUrl: 'app/views/login_success.html',
+            controller: 'UserisLogged'
 
         });
 

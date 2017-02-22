@@ -2,11 +2,36 @@
  * Created by davinazz on 16/02/2017.
  */
 
-appchat.controller('UserController', function($scope, $window, UserService) {
+appchat.controller('UserController', function($scope, $window, UserService, $state) {
 
 
         var user = localStorage.getItem("user");
         var objetUser = JSON.parse(user);
+
+        if (localStorage.getItem("user")) {
+
+          $state.go("profil")
+
+        }
+        else {
+
+        }
+
+
+
+        $scope.userlogged = function () {
+                if (localStorage.getItem("user")) {
+                  setTimeout(function () {
+                    $state.go("profil")
+                  }, 3000);
+                }
+                else {
+
+                }
+              };
+
+
+
 
         $scope.signup = function () {
             var user = {
@@ -31,7 +56,7 @@ appchat.controller('UserController', function($scope, $window, UserService) {
                UserService.loginUser(userlogin).then(function (response) {
                    if(response.data.success){
                        localStorage.setItem("user",JSON.stringify(response.data));
-                       $window.location = "#!/login_success";
+                       $window.location = "#/login_success";
                    }
                    else {
 

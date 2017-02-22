@@ -1,4 +1,4 @@
-appchat.controller('createController', function($scope, $routeParams, conversationService, $location) {
+appchat.controller('createController', function($scope, conversationService, $location) {
 
 	$scope.newConversation = function(id){
 		var user = {
