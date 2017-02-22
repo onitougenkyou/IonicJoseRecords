@@ -1,0 +1,20 @@
+div.test {
+  background: red;
+}
+@include breakpoint(0 767px) {
+  div.maDiv2 {
+    display: none;
+  }
+  div.maDiv1 {
+    background: mediumaquamarine;
+  }
+}
+
+@include breakpoint(768px) {
+  div.maDiv1 {
+    display: none;
+  }
+  div.maDiv2 {
+    background: blue;
+  }
+}

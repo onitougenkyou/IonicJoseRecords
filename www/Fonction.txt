@@ -1,0 +1,1 @@
+Menu bar : Bouton conversation, qui affiche l'ensemble des discussions. Possibilité de filtrer les utilsiateurs pour créer une conversation avec ou voir une conversation éxistante.

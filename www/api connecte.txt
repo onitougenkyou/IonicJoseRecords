@@ -1,0 +1,10 @@
+
+/api/users/search/{keywords}
+/api/users/view/{id}
+/api/users/login/{email}/{password}
+/api/users/create/{email}/{pseudo}/{password}/{firstName}/{lastName}
+/api/conversations/create/{user_id_recipient}/{user_id_sender}
+/api/conversations/messages/create/{conversation_id}/{user_id}/{content}
+/api/conversations/{userId}
+/api/topics/all/{limit}/{offset}/{orderByColumn}/{orderByType}
+/api/topics/create/{userId}/{content}

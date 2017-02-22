@@ -1,0 +1,248 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Bahiana');
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
+
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+div.logo {
+	padding: 25px;
+	text-align: center;
+}
+
+img {
+	max-width: 100px;
+}
+
+
+/*----------------------------------------
+HEADER
+----------------------------------------*/
+.block-header .logo {
+	background: #219F8B;
+	font: 3rem  Bahiana, Arial ,sans-serif;
+  	text-transform: uppercase;
+  	text-align: center;
+
+	color: black;
+	padding: 0.1em;
+}
+.block-header .title{
+	line-height: 12rem;
+
+}
+.block-header .title p1 {
+	font: 1.3em  Bahiana, Arial ,sans-serif;
+	text-decoration: underline ;
+	line-height: 12rem;
+}
+.block-header .img {
+	width: 200%;
+	position: relative;
+	top: 29px;
+}
+
+
+.block-header span p2 {
+	background-color: #ff5500;
+	font-size: 0.8em;
+	line-height: 12rem;
+}
+.block-header .title, .img {
+	display:inline;
+	max-width:170px;
+}
+
+.block-header .title .img:hover {
+
+	max-width:190px;
+	animation: App-logo-spin infinite 1s linear;
+
+}
+
+
+/*--------------------------------------
+ANIMATION HEADER
+---------------------------------------*/
+
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+
+/*----------------------------------------
+NAVIGATION (BURGER)
+----------------------------------------*/
+.block-header .navigation {
+	background: black ;
+	padding: 25px;
+}
+
+
+.burger span{
+
+	display: block;
+	background: white;
+	width: 100%;
+	height: 5px;
+	margin-bottom: 6px;
+
+
+}
+
+
+.burger {
+	width: 45px;
+	float:right;
+}
+
+/*------------------------------------
+NAVIGATION (CONTENU BURGER)
+-------------------------------------*/
+
+  .modal {
+            left: 0;
+			right: 0;
+			top: 35%;
+			width: 150px;
+			position: fixed;
+			margin: 0 auto;
+			background: #fff;
+			padding: 45px;
+			z-index: 999;
+			font: 1rem  Rubik, Arial ,sans-serif;
+			list-style: none;
+        }
+        div.background {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0,0,0,0.3);
+        }
+
+
+.topbar {
+	background:#219F8B;
+	padding: 15px;
+}
+
+div.topbar div.container ul li {
+	float: left;
+	list-style-type: none;
+}
+div.topbar div.container ul li :first-child{
+	margin-right: 25px;
+
+}
+
+div.topbar div.container ul li a {
+	font: 2rem  Rubik, Arial ,sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	color:white;
+}
+
+div.topbar div.container ul li a:active {
+	color: #ff5500;
+}
+
+div.clear {
+	clear: both;
+}
+
+div.pull-right {
+	float: right;
+}
+
+div.pull-left {
+	float: left;
+}
+
+/*----------------------------------------
+MAIN
+----------------------------------------*/
+body {
+	background: #219F8B;
+	font: 2rem  Rubik, Arial ,sans-serif;
+	text-align: center;
+}
+
+input[type=text] {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.formconnect input,
+.formconnect button {
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.formconnect button {
+	width: 40%;
+	height: 25%;
+	background-color: #81b71a
+}
+.formconnect label {
+	color: white;
+}
+
+.topics {
+	color: white;
+}
+
+.block-section .topics {
+	text-align: left;
+
+	margin: auto;
+	overflow-y: scroll;
+	width:600px; 
+	height:300px;
+	border:#000000 2px solid;
+}
+
+
+/*---------------------------------------
+FOOTER
+----------------------------------------*/
+
+.block-footer {
+	background: #219F8B;
+	font: .6em  Bahiana, Arial ,sans-serif;
+}
+
+/*-------------Vu conversation--------------*/
+.receveur {
+	text-align: left;
+}

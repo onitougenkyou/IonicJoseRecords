@@ -1,0 +1,58 @@
+
+<header class="block-header">
+            	
+    <div class= "container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg-12 logo">
+
+
+                <div class="logo">
+
+                	<h1 class="title">
+                   		<img class="img" src="app/assets/image/jose.gif">
+                        <span>
+                            
+                        <p1>jose</p1> 
+
+                        <p2>records</p2>
+                        </span>
+                	</h1>
+
+            	</div>
+
+            	<nav class="navigation">
+                	<div class="burger" ng-click="menu = true">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                  
+
+                    <div class="clear"></div>
+                   		
+
+                	
+            	</nav>
+                  <div ng-show="menu">
+                        <div class="background" ng-click="menu = false"></div>
+                        <div class="modal">
+                           <ul>
+                                <li class="home">
+                                    <a href="#" ng-click="menu = false"> home </a>
+                                </li>
+                                <li class="tchat">
+                                    <a href="#" ng-click="menu = false"> tchat </a>
+                                </li>
+                                <li class="profil">
+                                    <a href="#!/profil/:id" ng-click="menu = false"> mon profil </a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</header>
