@@ -1,6 +1,6 @@
-appchat.controller('conversationController', function($scope, conversationService,$routeParams)
+appchat.controller('conversationController', function($scope, conversationService,$stateParams)
 {
-  var id = $routeParams.id;
+  var id = $stateParams.id;
   var lastID = null;
   var done = false;
   var user = localStorage.getItem('user');

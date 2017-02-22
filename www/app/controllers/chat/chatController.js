@@ -1,4 +1,4 @@
-appchat.controller('chatController', function($scope, chatService,$routeParams) {
+appchat.controller('chatController', function($scope, chatService,$stateParams) {
   // var id = $routeParams.id;
   // console.log(id);
   // // setInterval(function(){
