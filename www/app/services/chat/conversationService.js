@@ -6,7 +6,7 @@ appchat.factory('conversationService', function($http, $q) {
         response : false,
         getconversation: function(id) {
             var deferred = $q.defer();
-            var url = API + "/api/conversations/view/"+id ;
+            var url = API + "/conversations/view/"+id ;
 
             $http.get(url)
             .then(function(data, status) {
@@ -18,7 +18,7 @@ appchat.factory('conversationService', function($http, $q) {
         },
         create: function(user) {
           var deferred = $q.defer();
-          var url = API + "/api/conversations/create/" +user.recipient.id+ "/" +user.sender.id;
+          var url = API + "/conversations/create/" +user.recipient.id+ "/" +user.sender.id;
 
           // console.log(user);
           // console.log(user.recipient.id);
@@ -31,7 +31,7 @@ appchat.factory('conversationService', function($http, $q) {
         },
         RefreshById: function(id) {
             var deferred = $q.defer();
-            var url = API + "/api/conversations/messages/all/"+id ;
+            var url = API + "/conversations/messages/all/"+id ;
 
             $http.get(url)
             .then(function(data, status) {
@@ -43,8 +43,8 @@ appchat.factory('conversationService', function($http, $q) {
         },
         GetById: function(id) {
           var deferred = $q.defer();
-          var url = API + "/api/conversations/" + id;
-          
+          var url = API + "/conversations/" + id;
+
 
           $http.get(url)
           .then(function(data, status) {
@@ -55,7 +55,7 @@ appchat.factory('conversationService', function($http, $q) {
         },
         SendMessage: function(conversId,userId,content) {
           var deferred = $q.defer();
-          var url = API + "/api/conversations/messages/create/"+conversId+"/"+userId+"/"+content;
+          var url = API + "/conversations/messages/create/"+conversId+"/"+userId+"/"+content;
 
           $http.get(url)
           .then(function(data, status) {
