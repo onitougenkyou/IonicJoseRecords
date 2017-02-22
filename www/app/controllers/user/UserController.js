@@ -19,7 +19,7 @@ appchat.controller('UserController', function($scope, $window, UserService, $sta
 
 
 
-        $scope.userlogged = function () {
+
                 if (localStorage.getItem("user")) {
                   setTimeout(function () {
                     $state.go("profil")
@@ -28,7 +28,7 @@ appchat.controller('UserController', function($scope, $window, UserService, $sta
                 else {
 
                 }
-              };
+
 
 
 
