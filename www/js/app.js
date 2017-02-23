@@ -25,22 +25,22 @@ appchat.run(function($ionicPlatform) {
 appchat.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-    .state('app', {
+  .state('app', {
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
 
-    .state('app.signup', {
-      url: '/signup',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/signup.html',
-          controller: 'UserController'
-        }
+  .state('app.signup', {
+    url: '/signup',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/signup.html',
+        controller: 'UserController'
       }
-    })
+    }
+  })
 
   .state('app.login', {
     url: '/login',
@@ -53,45 +53,53 @@ appchat.config(function($stateProvider, $urlRouterProvider) {
   })
 
   .state('app.profil', {
-      url: '/profil',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/profil.html',
-          controller: 'profilController'
-        }
+    url: '/profil',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/profil.html',
+        controller: 'profilController'
       }
-    })
+    }
+  })
 
-    .state('conversation_createview', {
-      url: '/conversation/messages/createView',
-      templateUrl: 'templates/conversation/createView.html',
-      controller: 'createController'
-    })
+  .state('app.conversation_createview', {
+    url: '/conversation/messages/createView',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/conversation/createView.html',
+        controller: 'createController'
+      }
+    }
+  })
 
-    .state('conversation', {
-      url: '/conversation/messages/:id',
-      templateUrl: 'templates/chat.html',
-      controller: 'conversationController'
-    })
+  .state('conversation', {
+    url: '/conversation/messages/:id',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/chat.html',
+        controller: 'conversationController'
+      }
+    }
+  })
 
-    .state('conversation_id', {
-      url: '/conversation/:id',
-      templateUrl: 'templates/conversation/viewConversation.html',
-      controller: 'viewController'
-    })
+  .state('conversation_id', {
+    url: '/conversation/:id',
+    templateUrl: 'templates/conversation/viewConversation.html',
+    controller: 'viewController'
+  })
 
-    .state('signup_success', {
-      url: '/signup_success',
-      templateUrl: 'templates/signup_success.html'
+  .state('signup_success', {
+    url: '/signup_success',
+    templateUrl: 'templates/signup_success.html'
 
-    })
+  })
 
-    .state('login_success', {
-      url: '/login_success',
-      templateUrl: 'templates/login_success.html',
-      controller: 'UserController'
+  .state('login_success', {
+    url: '/login_success',
+    templateUrl: 'templates/login_success.html',
+    controller: 'UserController'
 
-    });
+  });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app');
 });
