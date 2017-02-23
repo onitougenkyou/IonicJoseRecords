@@ -12,14 +12,14 @@
           Publier
         </button>
 
-        <div class="bouton-all-message" ng-controller ="viewController">
+        <!--<div class="bouton-all-message" ng-controller ="viewController">
           <button class="message" ng-click ="vuConversation()">
             Message
-          </button>
-        </div>
-        <button class="modifier">
+          </button>-->
+
+        <!--<button class="modifier">
           Modifier profil
-        </button>
+        </button>-->
 
       </div>
 <!-- FIN TEXT AREA -->
@@ -33,10 +33,11 @@
 
             <article class="col-xs-12 article1">
                 <div class="topics">
+                  <h4>Vos publications récentes...</h4>
                 <table class="table">
                   <tr ng-repeat="topic in topics">
                     <td>
-                      {{topic.content}}
+                      <p>{{topic.content}}</p>
                     </td>
                   </tr>
                 </table>

@@ -17,14 +17,14 @@ appchat.controller('profilController', function(
 
 
 
-	topicService.GetAll(user.id, 10).then(function(response) {
+	topicService.GetAll($scope.user.id, 10).then(function(response) {
 
 	});
 
 
 
 /* text area publictation */
-	
+
 
 	$scope.envoyer = function() {
 
@@ -36,7 +36,7 @@ appchat.controller('profilController', function(
 			userid: userjson.id,
 			contenu: $scope.contenupost
 		};
- 		
+
  		profilService.newPost(newPost);
 	}
 
