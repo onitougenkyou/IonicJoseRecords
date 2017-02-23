@@ -62,36 +62,38 @@ appchat.config(function($stateProvider, $urlRouterProvider) {
     }
   })
 
-  .state('app.conversation_createview', {
-    url: '/conversation/messages/createView',
+  .state('app.conversation_create', {
+    url: '/conversation/messages/create/:id/:id2',
     views: {
-      'menuContent': {
+      'menuContent':{
         templateUrl: 'templates/conversation/createView.html',
         controller: 'createController'
       }
     }
   })
 
-  .state('conversation', {
+  .state('app.conversation', {
     url: '/conversation/messages/:id',
     views: {
-      'menuContent': {
-        templateUrl: 'templates/chat.html',
-        controller: 'conversationController'
-      }
+
+      templateUrl: 'templates/chat.html',
+      controller: 'conversationController'
     }
+
   })
 
-  .state('conversation_id', {
+  .state('app.conversation_id', {
     url: '/conversation/:id',
-    templateUrl: 'templates/conversation/viewConversation.html',
-    controller: 'viewController'
+    views: {
+      templateUrl: 'templates/conversation/viewConversation.html',
+      controller: 'viewController'
+    }
+
   })
 
   .state('signup_success', {
     url: '/signup_success',
     templateUrl: 'templates/signup_success.html'
-
   })
 
   .state('login_success', {

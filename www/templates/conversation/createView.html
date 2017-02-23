@@ -1,5 +1,8 @@
+<div class="head-create-conv">
+  <p>Votre conversation :</p>
+</div>
 
-  <table class="table table-striped table-hover table-only">
+  <table class="table table-striped table-hover table-only table-create-conv">
     <tr class="table-creat-conversation">
       <td>
         {{ CreatConversation.id }}
@@ -12,5 +15,31 @@
       </td>
     </tr>
   </table>
+
+  <div >
+    <table class="table">
+      <thead>
+        <th>Prénom</th>
+        <th>Nom</th>
+        <th>Message</th>
+      </thead>
+      <tbody>
+
+    <tr ng-repeat="message in messages">
+      <td>{{message.user.firstName}}</td>
+      <td>{{message.user.lastName}}</td>
+      <td>{{message.content}}</td>
+    </tr>
+  </tbody>
+  </table>
+  <div >
+    <textarea name="name" rows="8" cols="80" ng-model="dd"></textarea>
+    <input type="button" name="envoyer" value="envoyer" ng-click="f(id,user)">
+
+  </div>
+
+  </div>
+  text n'importe quoi
+<br>
 
   <a class="lien-index" href="index.html">Retour à l'Acceuil</a>
