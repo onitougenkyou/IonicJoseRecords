@@ -2,7 +2,7 @@
  * Created by davinazz on 16/02/2017.
  */
 
-appchat.controller('UserController', function($scope, $window, UserService, $state) {
+appchat.controller('UserController', function($scope, $window, UserService, $state,$ionicHistory) {
 
 
         var user = localStorage.getItem("user");
@@ -14,7 +14,7 @@ appchat.controller('UserController', function($scope, $window, UserService, $sta
 
         }
         else {
-
+          $state.go('app.login');
         }
 
                 if (localStorage.getItem("user")) {
@@ -23,7 +23,7 @@ appchat.controller('UserController', function($scope, $window, UserService, $sta
                   }, 3000);
                 }
                 else {
-
+                  $state.go('app.login');
                 }
 
 
@@ -40,7 +40,7 @@ appchat.controller('UserController', function($scope, $window, UserService, $sta
             };
             console.log(user);
             UserService.createUser(user);
-            $window.location = "#!/signup_success";
+            $state.go('app.login');
         };
 
             $scope.login = function () {
@@ -53,7 +53,7 @@ appchat.controller('UserController', function($scope, $window, UserService, $sta
                UserService.loginUser(userlogin).then(function (response) {
                    if(response.data.success){
                        localStorage.setItem("user",JSON.stringify(response.data));
-                       $window.location = "#/login_success";
+                       $state.go('app.profil');
                    }
                    else {
 
@@ -64,5 +64,11 @@ appchat.controller('UserController', function($scope, $window, UserService, $sta
 
 
                                         }
+          $scope.deconnexion = function () {
+            $window.localStorage.clear();
+            $ionicHistory.clearCache();
+            $ionicHistory.clearHistory();
+            $state.go('app.login');
+          }
     }
 );

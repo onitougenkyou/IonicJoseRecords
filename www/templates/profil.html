@@ -1,26 +1,25 @@
-<ion-view view-title="Profil" style="margin-top: 50px">
+<ion-view view-title="Profil" style="margin-top: 43px">
 <!-- MAIN -->
 
 
         <label class="item item-input">
-          <span class="input-label">Username</span>
-          <input type="text">
+          <input type="text" placeholder="Exprimez-vous..." ng-model="contenupost">
         </label>
 
 
 
-        <button class="message" ng-click = "envoyer()">
-          Envoyer
+        <button class="button button-positive" ng-click = "envoyer()" style="float: right">
+          Publier
         </button>
 
-        <div class="bouton-all-message" ng-controller ="viewController">
+        <!--<div class="bouton-all-message" ng-controller ="viewController">
           <button class="message" ng-click ="vuConversation()">
             Message
-          </button>
-        </div>
-        <button class="modifier">
+          </button>-->
+
+        <!--<button class="modifier">
           Modifier profil
-        </button>
+        </button>-->
 
       </div>
 <!-- FIN TEXT AREA -->
@@ -34,10 +33,11 @@
 
             <article class="col-xs-12 article1">
                 <div class="topics">
+                  <h4>Vos publications récentes...</h4>
                 <table class="table">
                   <tr ng-repeat="topic in topics">
                     <td>
-                      {{topic.content}}
+                      <p>{{topic.content}}</p>
                     </td>
                   </tr>
                 </table>

@@ -1,4 +1,4 @@
-<ion-side-menus enable-menu-with-back-views="false">
+<ion-side-menus enable-menu-with-back-views="false" style="margin-bottom: 43px">
   <ion-side-menu-content>
     <ion-nav-bar class="bar-stable ionbar">
       <ion-nav-back-button>
@@ -14,7 +14,7 @@
 
   <ion-side-menu side="left">
     <ion-header-bar class="bar-stable">
-      <h1 class="title">Left</h1>
+      <h1 class="title">Menu</h1>
     </ion-header-bar>
     <ion-content>
       <ion-list>
@@ -23,6 +23,12 @@
         </ion-item>
         <ion-item menu-close href="#/app/signup">
           Inscription
+        </ion-item>
+        <ion-item menu-close href="#/app/profil">
+          Profil
+        </ion-item>
+        <ion-item menu-close ng-controller="UserController" ng-click="deconnexion()">
+          Déconnexion
         </ion-item>
 
       </ion-list>

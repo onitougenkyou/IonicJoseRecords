@@ -56,7 +56,8 @@ appchat.config(function($stateProvider, $urlRouterProvider) {
       url: '/profil',
       views: {
         'menuContent': {
-          templateUrl: 'templates/profil.html'
+          templateUrl: 'templates/profil.html',
+          controller: 'profilController'
         }
       }
     })
