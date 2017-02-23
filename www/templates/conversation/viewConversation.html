@@ -1,0 +1,14 @@
+
+<table class="table table-striped table-hover table-only">
+  <tr class="table-creat-conversation viewConversation" ng-repeat="conversation in conversations">
+    <td class="recipient">
+      receveur :  {{ conversation.userRecipient.id }}
+    </td>
+    <td class="sender">
+      Expéditeur :  {{ conversation.userSender.id }}
+    </td>
+  <td>
+    <button type="button">Vers le chat</button>
+  </td>
+  </tr>
+</table>

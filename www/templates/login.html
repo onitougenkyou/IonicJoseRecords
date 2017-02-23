@@ -1,0 +1,21 @@
+
+{{useralreadylogged()}}
+
+<ion-view view-title="Connexion" style="padding-top: 50px">
+<p>
+    Se connecter à José Records
+</p>
+
+<div class="list">
+    <label class="item item-input">
+      <span class="input-label">Adresse e-mail</span>
+      <input type="text" ng-model="mail" placeholder="Votre adresse e-mail" /><br />
+    </label>
+
+    <label class="item item-input">
+      <span class="input-label">Mot de passe</span>
+    <input type="password" ng-model="password" placeholder="******"/><br />
+    </label>
+    <button ng-click="login()" type="button" class="button button-balanced">Se connecter</button>
+</div>
+</ion-view>

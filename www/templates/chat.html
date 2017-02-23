@@ -1,0 +1,25 @@
+
+<div >
+  <table class="table">
+    <thead>
+      <th>Prénom</th>
+      <th>Nom</th>
+      <th>Message</th>
+    </thead>
+    <tbody>
+
+  <tr ng-repeat="message in messages">
+    <td>{{message.user.firstName}}</td>
+    <td>{{message.user.lastName}}</td>
+    <td>{{message.content}}</td>
+  </tr>
+</tbody>
+</table>
+<div >
+  <textarea name="name" rows="8" cols="80" ng-model="dd"></textarea>
+  <input type="button" name="envoyer" value="envoyer" ng-click="f(id,user)">
+
+</div>
+
+</div>
+text n'importe quoi

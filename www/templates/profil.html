@@ -1,0 +1,94 @@
+<ion-view view-title="Profil">
+<!-- MAIN -->
+    <main class="block-main">
+
+<!-- TEXT AREA -->
+      <div class="block-button">
+
+
+        <textarea ng-model="contenupost" name=champTexte id=champTexte rows=4 cols=50>
+          Exprimez-vous
+        </textarea>
+
+
+
+        <button class="message" ng-click = "envoyer()">
+          Envoyer
+        </button>
+
+        <div class="bouton-all-message" ng-controller ="viewController">
+          <button class="message" ng-click ="vuConversation()">
+            Message
+          </button>
+        </div>
+        <button class="modifier">
+          Modifier profil
+        </button>
+
+      </div>
+<!-- FIN TEXT AREA -->
+
+<!-- ARTICLES -->
+
+      <section class="block-section">
+
+        <div class="container boxes">
+          <div class="row">
+
+            <article class="col-xs-12 article1">
+                <div class="topics">
+                <table class="table">
+                  <tr ng-repeat="topic in topics">
+                    <td>
+                      {{topic.content}}
+                    </td>
+                  </tr>
+                </table>
+                </div>
+            </article>
+              </div>
+
+            </article>
+
+            <article class="col-xs-12 article2">
+
+              <div class="inner">
+
+
+              </div>
+
+            </article>
+
+            <article class="col-xs-12 article3">
+
+              <div class="inner">
+ <!-- CONTENU DES PUBLICATIONS JIMMY -->
+
+                <!-- FIN PUBLICATIONS -->
+
+
+
+              </div>
+
+            </article>
+
+          </div>  <!-- row -->
+        </div> <!-- container -->
+      </section>
+<!-- ASIDE CONTACT -->
+          <aside class="block-contact">
+            <div class="button-contact" ng-controller ="createController">
+
+              <button type="button" name="button" ng-click ="newConversation(2)">
+
+              Contater la personne
+              </button>
+
+              </div>
+
+
+          </aside>
+<!-- FIN ASIDE CONTACT -->
+
+    </main>
+</ion-view>
