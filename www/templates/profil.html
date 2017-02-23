@@ -1,16 +1,15 @@
-<ion-view view-title="Profil" style="margin-top: 50px">
+<ion-view view-title="Profil" style="margin-top: 43px">
 <!-- MAIN -->
 
 
         <label class="item item-input">
-          <span class="input-label">Username</span>
-          <input type="text">
+          <input type="text" placeholder="Exprimez-vous..." ng-model="contenupost">
         </label>
 
 
 
-        <button class="message" ng-click = "envoyer()">
-          Envoyer
+        <button class="button button-positive" ng-click = "envoyer()" style="float: right">
+          Publier
         </button>
 
         <div class="bouton-all-message" ng-controller ="viewController">
