@@ -3,8 +3,10 @@ appchat.controller('profilController', function(
 
     var user = localStorage.getItem("user");
     $scope.user = JSON.parse(user);
+    usertest = JSON.parse(user);
+    console.log("id user :"+ usertest.id);
 
-    profilService.retrieveTopics($scope.user.id).then(function (response) {
+    profilService.retrieveTopics(usertest.id).then(function (response) {
         $scope.topics = response.data;
     });
 
@@ -17,16 +19,13 @@ appchat.controller('profilController', function(
 
 
 
-	topicService.GetAll($scope.user.id, 10).then(function(response) {
-
-	});
-
-
 
 /* text area publictation */
 
 
 	$scope.envoyer = function() {
+
+    console.log("id user");
 
 		var user = localStorage.getItem("user");
 

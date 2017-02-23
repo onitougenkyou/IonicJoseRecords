@@ -28,7 +28,8 @@ appchat.factory('profilService', function($http, $q) {
 
             var deferred = $q.defer();
 
-            var url = API + "/topics/all/" + iduser;
+            var url = API + "/topics/user/" + iduser + '/5';
+            console.log(url);
 
             $http.get(url)
                 .then(function(data) {
