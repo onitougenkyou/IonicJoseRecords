@@ -1,19 +1,26 @@
-<ion-view view-title="Créer un compte">
+<ion-view view-title="Créer un compte" style="margin-top: 45px">
 
+  <label class="item item-input">
+    <span class="input-label">Adresse @mail</span>
+    <input type="text" ng-model="mail">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Mot de passe</span>
+    <input type="text" ng-model="password">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Pseudo</span>
+    <input type="text" ng-model="nickname">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Nom</span>
+    <input type="text" ng-model="lastname">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Prénom</span>
+    <input type="text" ng-model="firstname">
+  </label>
+    <button ng-click="signup()" class="button button-balanced" style="min-width: 100%">S'inscrire</button>
 
-
-<form>
-    <label>Adresse mail</label>
-    <input type="text" ng-model="mail" placeholder="Saisir une adresse mail"/><br/>
-    <label>Mot de passe</label>
-    <input type="password" ng-model="password" placeholder="******"/><br/>
-    <label>Pseudo</label>
-    <input type="text" ng-model="nickname" placeholder="Saisir un pseudo"/><br/>
-    <label>Nom</label>
-    <input type="text" ng-model="lastname" placeholder="Saisir un nom"/><br/>
-    <label>Prénom</label>
-    <input type="text" ng-model="firstname" placeholder="Saisir un prénom"/><br/>
-    <button ng-click="signup()">S'inscrire</button>
-</form>
 
 </ion-view>
